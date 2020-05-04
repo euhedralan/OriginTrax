@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Bean Counter</title> 
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 bg-shade">
+                    
+                    <div class="row-fluid clearfix">
+                            <h4 class="text-center">Ticket Entry</h4>
+                    </div>
+                    <hr class="hr-dark">
+                    <div class="row-fluid">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="transaction">Transaction</label>
+                                        <div class="col-md-4">
+                                            <select id="transaction" name="transaction" class="form-control" style="width:auto;">
+                                                <option value="IN">IN</option>
+                                                <option value="OUT">OUT</option>
+                                            </select>
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="branch">Branch</label>
+                                        <div class="col-md-4">
+                                            <input id="branch" name="branch" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                     
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="gross">Gross</label>
+                                        <div class="col-md-4">
+                                            <input id="gross" name="gross" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                 
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div> <!-- END FORM ROW 1-->
+
+                    <div class="row-fluid">
+                        <form class="form-horizontal">
+                            <fieldset>                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="ticket">Ticket</label>
+                                        <div class="col-md-4">
+                                            <input id="ticket" name="ticket" type="text" placeholder="" size="5" class="form-control input-md" required="">
+                                        </div>
+                                    </div>                    
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="customer">Customer</label>
+                                        <div class="col-md-4">
+                                            <input id="customer" name="customer" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                        
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="tare">Tare</label>
+                                        <div class="col-md-4">
+                                            <input id="tare" name="tare" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                            
+                                </div> 
+                            </fieldset>
+                        </form>               
+                    </div>  <!-- END FORM ROW 2--> 
+                    <div class="row-fluid">
+                        <form class="form-horizontal">
+                            <fieldset>                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="reference">Reference</label>
+                                        <div class="col-md-4">
+                                            <input id="reference" name="reference" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                    
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="outCustomer">Out Customer</label>
+                                        <div class="col-md-4">
+                                            <input id="outCustomer" name="outCustomer" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                        
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="net">Net</label>
+                                        <div class="col-md-4">
+                                            <input id="net" name="net" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>                            
+                                </div> 
+                            </fieldset>
+                        </form>               
+                    </div> <!-- END FORM ROW 3 --> 
+                    
+                    <div class="row-fluid">
+                        <form class="form-horizontal">
+                            <fieldset>                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="commodity">Commodity</label>
+                                        <div class="col-md-4">
+                                            <select id="commodity" name="commodity" class="form-control" style="width:auto;">
+                                                <option value="Wheat">Wheat</option>
+                                                <option value="Corn">Corn</option>
+                                                <option value="Beans">Beans</option>
+                                                <option value="Oats">Oats</option>
+                                            </select>
+                                        </div>
+                                    </div>                    
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="ticketDate">Ticket Date</label>
+                                        <div class="col-md-4">
+                                            <input id="ticketDate" name="ticketDate" type="date"  data-date-format="dd-mm-yyyy"  style="width:auto;" class="form-control input-md">
+                                        </div>
+                                    </div>                        
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="postDate">Posting Date</label>
+                                        <div class="col-md-4">
+                                            <input id="postDate" name="postDate" type="date"  data-date-format="dd-mm-yyyy" style="width:auto;" class="form-control input-md">
+                                        </div>
+                                    </div>                            
+                                </div> 
+                            </fieldset>
+                        </form>               
+                    </div> <!-- END FORM ROW 4-->  
+                    
+                    <div class="row-fluid">
+                        <form class="form-horizontal">
+                            <fieldset>                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="position">Position</label>
+                                        <div class="col-md-4">
+                                            <select id="position" name="position" class="form-control" style="width:auto;">
+                                                <option value="Balance Forward" >Balance Forward</option>
+                                                <option value="Customer Receipt">Customer Receipt</option>
+                                                <option value="Commercial Receipt">Commercial Receipt</option>
+                                                <option value="Company Transfer">Company Transfer</option>
+                                                <option value="Direct Ship">Direct Ship</option>
+                                                <option value="Receipt with Freight">Receipt with Freight</option>
+                                            </select>
+                                        </div>
+                                    </div>                    
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="disperse">Dispersment</label>
+                                        <div class="col-md-4">
+                                            <select id="disperse" name="disperse" class="form-control" style="width:auto;">
+                                                <option value="Limited Storage">Limited Storage</option>
+                                                <option value="Holding">Holding</option>
+                                                <option value="Open Storage">Open Storage</option>
+                                                <option value="Grain Bank">Grain Bank</option>
+                                                <option value="No Storage">No Storage</option>
+                                                <option value="Company Owned">Company Owned</option>
+                                            </select>
+                                        </div>
+                                    </div>                        
+                                </div>
+        
+                                <div class="col-md-4">
+                                     <!-- EMPTY BOTTOM RIGHT-->  
+                                </div> 
+                            </fieldset>
+                        </form>               
+                    </div> <!-- END FORM ROW 5-->
+                    
+                    <div class="row-fluid">
+                            <div class="form-group">
+                                <label class="col-md-10 control-label" for="factors-0">Factors</label>
+                                <div class="col-md-10">
+                                    <label class="checkbox-inline" for="factors-0">
+                                        <input type="checkbox" name="factors" id="factors-0" value="1" > D$ </label>
+                                    <label class="checkbox-inline" for="factors-1">
+                                        <input type="checkbox" name="factors" id="factors-1" value="2"> DK </label>
+                                    <label class="checkbox-inline" for="factors-2">
+                                        <input type="checkbox" name="factors" id="factors-2" value="3"> MS </label>
+                                    <label class="checkbox-inline" for="factors-3">
+                                        <input type="checkbox" name="factors" id="factors-3" value="4"> TW </label>
+                                    <label class="checkbox-inline" for="factors-4">
+                                        <input type="checkbox" name="factors" id="factors-4" value="5"> DM </label>
+                                    <label class="checkbox-inline" for="factors-5">
+                                        <input type="checkbox" name="factors" id="factors-5" value="6"> FM </label>
+                                </div>
+                                <div class="col-md-2"> <button type="button" class="btn btn-primary"  id="submitBB">Submit</button></div> 
+                            </div> 
+                    </div> <!-- END FACTORS CHECKBOX ROW-->    
+                    <div class="row-fluid">
+                            
+                    </div> <!-- SUBMIT BUTTON ROW-->                  
+                    
+                </div> <!-- END FORM md-10 COLUMN-->
+                <div class="col-md-1"></div>
+            </div> <!-- END FORM ROW-->
+        </div> <!-- END FORM CONTAINER-->
+
+        <div class="container margin-top-md margin-bottom-md">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 bg-shade">
+                <div class="row-fluid clearfix">
+                    <hr class="hr-dark">    
+                    <h4 class="text-center">Balances</h4>  
+                    <hr class="hr-dark">
+                </div>
+                <div class="row-fluid" ><h4>Limited Storage:</h4><input id="lstorage" name="lstorage" type="text" class="form-control input-md"></div>
+                <div class="row-fluid" ><h4>Holding</h4><input id="holding" name="holding" type="text"  class="form-control input-md"></div>
+                <div class="row-fluid" ><h4>Open Storage:</h4><input id="ostorage" name="ostorage" type="text" class="form-control input-md"></div>
+                <div class="row-fluid" ><h4>Grain Bank</h4><input id="bank" name="bank" type="text"  class="form-control input-md"></div>
+                <div class="row-fluid" ><h4>No Storage</h4><input id="nostorage" name="nostorage" type="text"  class="form-control input-md"></div>
+                <div class="row-fluid" ><h4>Company Owned</h4><input id="owned" name="owned" type="text" class="form-control input-md"></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div> <!-- END BALANCE CONTAINER-->  
+
+        <div class="container">
+            <div class="col-md-1"></div>    
+            <div class="col-md-10">
+
+                <div class="col-md-3"></div>
+                <div class="col-md-6 bg-shade" id="log">
+                    <div class="row-fluid clearfix">
+                        <hr class="hr-dark">    
+                        <h4 class="text-center">Log</h4>  
+                        <hr class="hr-dark">
+                    </div>
+                    <!-- TICKET LOG ENTRIES GET INSERTED HERE
+                    <div class="row-fluid margin-y-xs">11/20/2019 - Wheat -1000LBS - Grain Bank</div>
+                    -->
+                </div>
+                <div class="col-md-3"></div>
+            </div> <!-- END LOG MIDDLE COLUMN-->
+            <div class="col-md-1"></div>
+        </div> <!-- END LOG CONTAINERS-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function(){
+$('#submitBB').click(function(){
+    var transaction = $('#transaction').val();
+    var branch = $('#branch').val();
+    var gross = $('#gross').val();
+    var ticket = $('#ticket').val();
+    var customer = $('#customer').val();
+    var tare = $('#tare').val();
+    var reference = $('#reference').val();
+    var outCustomer = $('#outCustomer').val();
+    var net = $('#net').val();
+    var commodity = $('#commodity').val();
+    var ticketDate = $('#ticketDate').val();
+    var postDate = $('#postDate').val();
+    var position = $('#position').val();
+    var disperse = $('#disperse').val();
+    var factors0 = $('#factors0').val();
+    var factors1 = $('#factors1').val();
+    var factors2 = $('#factors2').val();
+    var factors3 = $('#factors3').val();
+    var factors4 = $('#factors4').val();
+    var factors5 = $('#factors5').val();
+    var factors6 = $('#factors6').val();
+
+    var newDiv = $("<div class='row-fluid margin-y-xs'>" + ticketDate + " - " + commodity + " - " + gross + " LBS - " + disperse + "</div>");
+    $('#log').append(newDiv);
+
+    if(disperse == "Limited Storage") {
+        a = $('#lstorage').val();
+        b = parseInt(gross);
+        if (a == "") $('#lstorage').val(b);
+        else {
+            a = parseInt(a);
+            a = a + b;
+            $('#lstorage').val(a);
+        }
+        
+    }
+    if(disperse == "Holding") {
+        a = $('#holding').val();
+        b = parseInt(gross);
+        if (a == "") $('#holding').val(b);
+        else {
+            a = parseInt(a);
+            a = a + b;
+            $('#holding').val(a);
+        }
+    }
+    if(disperse == "Open Storage") {
+        a = $('#ostorage').val();
+        b = parseInt(gross);
+        if (a == "") $('#ostorage').val(b);
+        else {
+            a = parseInt(a);
+            a = a + b;
+            $('#ostorage').val(a);
+        }
+    }
+    if(disperse == "Grain Bank") {
+        a = $('#bank').val();
+        b = parseInt(gross);
+        if (a == "") $('#bank').val(b);
+        else {
+            a = parseInt(a);
+            a = a + b;
+            $('#bank').val(a);
+        }
+    }
+    if(disperse == "No Storage") {
+        a = $('#nostorage').val();
+        b = parseInt(gross);
+        if (a == "") $('#nostorage').val(b);
+        else {
+            a = parseInt(a);
+            a = a + b;
+            $('#nostorage').val(a);
+        }
+    }
+    if(disperse == "Company Owned") {
+        a = $('#owned').val();
+        b = parseInt(gross);
+        if (a == "") $('#owned').val(b);
+        else {
+            a = parseInt(a);
+            a = a + b;
+            $('#owned').val(a);
+        }
+    }
+});
+});
+        
+        
+        </script>
+    </body>
+</html>
