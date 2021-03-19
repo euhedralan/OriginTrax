@@ -14,12 +14,41 @@ body{
     background: rgba(0, 0, 0, 0.1);
 }
 
+.logo-icon {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    margin-right:10px;
+    float:left;
+
+}
+
+.gridrow{
+    
+}
+
+.searchbox {
+    padding: 2px; 
+}
+
+.ticketCol{
+    color: beige;
+}
+
+::placeholder {
+    color: grey;
+    opacity: .75;
+}
+
 .font-weight-bold {font-weight: bold;}
 .padding-xs { padding: .25em; }
 .padding-sm { padding: .5em; }
 .padding-md { padding: 1em; }
 .padding-lg { padding: 1.5em; }
 .padding-xl { padding: 3em; }
+.padding-none { padding: 0px;}
 
 .padding-x-xs { padding: .25em 0; }
 .padding-x-sm { padding: .5em 0; }
@@ -62,6 +91,7 @@ body{
 .margin-md { margin: 1em; }
 .margin-lg { margin: 1.5em; }
 .margin-xl { margin: 3em; }
+.margin-none { margin: 0px;}
 
 .margin-x-xs { margin: .25em 0; }
 .margin-x-sm { margin: .5em 0; }
@@ -98,3 +128,21 @@ body{
 .margin-left-md { margin-left: 1em; }
 .margin-left-lg { margin-left: 1.5em; }
 .margin-left-xl { margin-left: 3em; }
+
+
+/* The popup chat - hidden by default */
+.ticket-window {
+display: none; 
+position: fixed;
+top: 20%;
+left: 20%;
+border: 3px solid #f1f1f1;
+z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+padding: 10px;
+background-color: white;
+}
+
