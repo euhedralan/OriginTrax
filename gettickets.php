@@ -1,8 +1,8 @@
 <?php
-    $servername= "localhost";
-    $username="bnb";
-    $password="";
-    $dbname="origins";
+    $servername= "origintrax1.database.windows.net";
+    $username="player1 ";
+    $password="SGRE@123";
+    $dbname="origintrax";
 
     $data = array();
 
