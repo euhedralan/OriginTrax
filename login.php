@@ -2,10 +2,10 @@
     session_start();
     $_SESSION['authenticated'] = false;
 
-    $servername= "localhost";
-    $username="bnb";
-    $password="";
-    $dbname="origins";
+    $servername= "origintrax1.database.windows.net";
+    $username="player1 ";
+    $password="SGRE@123";
+    $dbname="origintrax";
 
     $conn = new mysqli($servername, $username, $password, $dbname); 
     if ($conn->connect_errno){
