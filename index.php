@@ -1,9 +1,3 @@
-
-<!-- OriginTrax - Chad Mendenhall 
-     INF653 - Final Project   5/10/2020
-     Commodity ticket tracking system
--->
-
 <!-- USER AUTHENTICATION CHECK -->
 <?PHP
     session_start();

@@ -13,7 +13,7 @@ RETURNS:
 */
 <?php
     $servername= "origintrax1.database.windows.net";
-    $username="player1 ";
+    $username="playerone";
     $password="SGRE@123";
     $dbname="origintrax";
     
