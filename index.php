@@ -7,7 +7,6 @@
             $auth = true;
         }   
     }
-    $auth = true;
 ?>
 
 <!DOCTYPE html>
