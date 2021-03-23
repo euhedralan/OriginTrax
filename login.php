@@ -7,7 +7,7 @@
     $password="SGRE@123";
     $dbname="origintrax";
 
-    $conn = new mysqli($servername, $username, $password, $dbname); 
+    $conn = new mysqli($servername, $username, $password, $dbname, 1433); 
     if ($conn->connect_errno){
         echo '<h3> Connect failed! </h3>'
         die("Connection failed: " . $conn->connect_error);
