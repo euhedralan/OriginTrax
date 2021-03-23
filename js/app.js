@@ -76,7 +76,7 @@ $(function (){
         });
         },
         error: function() {
-            alert('error');
+            alert('error populate');
         }
     });
     
@@ -98,7 +98,7 @@ $(function (){
                 addTicket(JSON.parse(ticket));
                 },
                 error: function() {
-                    alert('error');
+                    alert('error search');
                 }
             });
         } else {
@@ -111,7 +111,7 @@ $(function (){
                 });
                 },
                 error: function() {
-                    alert('error');
+                    alert('error get');
                 }
             });                    
         }
@@ -147,7 +147,7 @@ $(function (){
                 }
             }, error: function()
             {
-                alert('error');
+                alert('error newticket');
             }
         });
     });
@@ -182,7 +182,7 @@ $(function (){
                 }
             }, error: function()
             {
-                alert('error');
+                alert('error update');
             }
         });
     });
