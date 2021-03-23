@@ -21,6 +21,7 @@ RETURNS:
 
     $conn = new mysqli($servername, $username, $password, $dbname); 
     if ($conn->connect_errno){
+        echo '<h3> Connect failed! </h3>'
         die("Connection failed: " . $conn->connect_error);
     }   
     $id = mysqli_real_escape_string($conn, $_POST['id']);
