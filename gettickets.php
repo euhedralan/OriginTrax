@@ -35,11 +35,15 @@
     }     
      
     $sql = "SELECT * FROM tickets";
-    $result = $conn->query($sql);
-
-    while($row = $result->fetch_array(MYSQLI_ASSOC))  {
+    //$result = $conn->query($sql);
+    
+    foreach($pdo->query($sql) as $row){
         $data[] = $row;
     }
+    
+    // while($row = $result->fetch_array(MYSQLI_ASSOC))  {
+    //     $data[] = $row;
+    // }
 
     echo json_encode($data);
 
