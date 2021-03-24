@@ -69,7 +69,7 @@ $(function (){
     //Populate the list of tickets
     $.ajax({
         type: 'GET',
-        url: 'gettickets.php',
+        url: './gettickets.php',
         success: function(tickets) {
             $.each(JSON.parse(tickets), function(i, ticket){
                 addTicket(ticket);
