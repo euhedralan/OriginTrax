@@ -42,6 +42,4 @@
         $data = Error;
         echo $data;
     }
-   
-    $conn->close(); 
 ?>

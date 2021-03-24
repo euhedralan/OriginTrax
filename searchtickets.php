@@ -31,8 +31,6 @@
     );
     
     echo json_encode($rticket);
-
-    $conn->close();
     
 ?>
 

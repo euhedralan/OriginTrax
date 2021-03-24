@@ -23,7 +23,5 @@
     } else {
         echo json_encode($conn -> error);
     }
-    
-    
-    $conn->close();
+
 ?>

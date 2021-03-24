@@ -30,6 +30,5 @@
             echo json_encode($user);
         }
     }
-    
-    $conn->close();
+
 ?>
