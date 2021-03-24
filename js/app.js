@@ -69,9 +69,7 @@ $(function (){
     //Populate the list of tickets
     $.ajax({
         type: 'POST',
-        url: 'gettickets.php',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
+        url: 'gettickets.php',       
         success: function(tickets) {
             $.each(JSON.parse(tickets), function(i, ticket){
                 addTicket(ticket);});
