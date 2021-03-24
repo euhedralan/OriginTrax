@@ -68,8 +68,8 @@ $(function (){
 
     //Populate the list of tickets
     $.ajax({
-        type: 'GET',
-        url: './gettickets.php',
+        type: 'POST',
+        url: 'gettickets.php',
         success: function(tickets) {
             $.each(JSON.parse(tickets), function(i, ticket){
                 addTicket(ticket);
@@ -103,7 +103,7 @@ $(function (){
             });
         } else {
             $.ajax({
-                type: 'GET',
+                type: 'POST',
                 url: 'gettickets.php',
                 success: function(tickets) {
                     $.each(JSON.parse(tickets), function(i, ticket){
