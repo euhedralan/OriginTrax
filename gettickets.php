@@ -37,7 +37,7 @@
     $sql = "SELECT * FROM tickets";
     //$result = $conn->query($sql);
     
-    foreach($pdo->query($sql) as $row){
+    foreach($conn->query($sql) as $row){
         $data[] = $row;
     }
     
