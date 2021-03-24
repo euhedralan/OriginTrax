@@ -15,8 +15,7 @@
     //Initializes MySQLi
     $conn = mysqli_init();
     
-    mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
-    
+    mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);    
     // Establish the connection
     mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
     
@@ -25,7 +24,7 @@
     {
         die('Failed to connect to MySQL: '.mysqli_connect_error());
     }
-    
+
     $user = mysqli_real_escape_string($conn, $_POST['username']);
     $pass = mysqli_real_escape_string($conn, $_POST['password']);
 
