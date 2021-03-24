@@ -25,7 +25,7 @@
     
     if($result) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
-        error_log($row);
+        error_log(implode(',' $row));
         if($user && $pass && $row[1] == $user && $row[2] == $pass) {
             $_SESSION['authenticated'] = true;
             echo json_encode($user);
