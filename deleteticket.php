@@ -17,6 +17,7 @@
     
     $sql = "DELETE FROM `tickets` WHERE `ticketNumber`=". $ticketnumber; 
     
+    $conn->prepare($sql);
     $result = $conn->query($sql);
     
     if($result) {
