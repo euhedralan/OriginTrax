@@ -24,7 +24,7 @@
     $result = $conn->query($sql);
     
     if($result) {
-        $row = $result->fetch(PDO::FETCH_NUM);
+        $row = $result->fetch(PDO::FETCH_ASSOC);
         
         if($user && $pass && $row[1] == $user && $row[2] == $pass) {
             $_SESSION['authenticated'] = true;

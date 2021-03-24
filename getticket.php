@@ -31,7 +31,7 @@ RETURNS:
     $conn->prepare($sql);
     $result = $conn->query($sql);
 
-    $row = $result->fetch(PDO::FETCH_ASSOC);
+    $row = $result;
     $rticket = array(
         'ticketnumber' => $row[0],
         'direction' => $row[1],
