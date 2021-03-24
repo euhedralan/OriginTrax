@@ -70,10 +70,11 @@ $(function (){
     $.ajax({
         type: 'POST',
         url: 'gettickets.php',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
         success: function(tickets) {
             $.each(JSON.parse(tickets), function(i, ticket){
-                addTicket(ticket);
-        });
+                addTicket(ticket);});
         },
         error: function() {
             alert('error populate');
