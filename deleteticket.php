@@ -1,6 +1,6 @@
 <?php
     $servername= "origintrax1.database.windows.net";
-    $username="playerone";
+    $username="playerone@origintrax1";
     $password="SGRE@123";
     $dbname="origintrax";
 
