@@ -10,17 +10,28 @@
     //     die("Connection failed: " . $conn->connect_error);
     // } 
     //Initializes MySQLi
-    $conn = mysqli_init();
+    // $conn = mysqli_init();
     
-    mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);    
-    // Establish the connection
-    mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
+    // mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);    
+    // // Establish the connection
+    // mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
     
-    //If connection failed, show the error
-    if (mysqli_connect_errno($conn))
-    {
-        die('Failed to connect to MySQL: '.mysqli_connect_error());
+    // //If connection failed, show the error
+    // if (mysqli_connect_errno($conn))
+    // {
+    //     die('Failed to connect to MySQL: '.mysqli_connect_error());
+    // }
+
+    // PHP Data Objects(PDO) Sample Code:
+    try {
+        $conn = new PDO("sqlsrv:server = tcp:origintrax1.database.windows.net,1433; Database = origintrax", "playerone", "SGRE@123");
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
+    catch (PDOException $e) {
+        print("Error connecting to SQL Server.");
+        die(print_r($e));
+    }    
+
     $direction = mysqli_real_escape_string($conn, $_POST['direction']);
     $date = mysqli_real_escape_string($conn, $_POST['date']);
     $branch = mysqli_real_escape_string($conn, $_POST['branch']);
