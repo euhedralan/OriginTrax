@@ -17,6 +17,7 @@
     }     
      
     $sql = "SELECT * FROM tickets";
+    $conn->prepare($sql);
     $result = $conn->query($sql);
     
     while($row = $result->fetch(PDO::FETCH_ASSOC))  {

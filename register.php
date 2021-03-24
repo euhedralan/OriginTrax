@@ -14,7 +14,8 @@
     }    
     $user = $_POST['rusername'];
     $pass = $_POST['rpassword'];
-    $sql = "INSERT INTO `users` (`username`, `password`) VALUES ('". $user. "','". $pass. "')";
+    $sql = "INSERT INTO users ('username', 'password') VALUES ('". $user. "','". $pass. "')";
+    $conn->prepare($sql);
     $result = $conn->query($sql);
     
     if($result) {

@@ -20,6 +20,7 @@
     $pass = $_POST['password'];
 
     $sql = "SELECT * FROM users WHERE username='". $user. "'";
+    $conn->prepare($sql);
     $result = $conn->query($sql);
     
     if($result) {

@@ -21,8 +21,8 @@
     $position = $_POST['position'];
     $pounds = $_POST['pounds'];
     
-    $sql = "UPDATE `tickets` SET `direction`='". $direction. "', `date`='". $date. "', `branch`=". $branch. ", `customer`=". $customer. ", `commodity`='". $commodity. "', `position`='". $position. "', `pounds`=". $pounds. " WHERE `ticketNumber`=". $ticketnumber; 
-    
+    $sql = "UPDATE tickets SET direction='". $direction. "', date='". $date. "', branch=". $branch. ", customer=". $customer. ", commodity='". $commodity. "', position='". $position. "', pounds=". $pounds. " WHERE ticketNumber=". $ticketnumber; 
+    $conn->prepare($sql);
     $result = $conn->query($sql);
     
     if($result) {

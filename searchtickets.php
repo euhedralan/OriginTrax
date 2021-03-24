@@ -15,7 +15,7 @@
     $id = $_POST['id'];
 
     $sql = "SELECT * FROM tickets WHERE ticketNumber='". $id. "'";
-
+    $conn->prepare($sql);
     $result = $conn->query($sql);
 
     $row = $result->fetch(PDO::FETCH_ASSOC);
