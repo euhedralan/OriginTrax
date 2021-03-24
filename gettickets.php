@@ -45,10 +45,7 @@
     //     $data[] = $row;
     // }
 
-    echo json_encode($data);
-
-    $conn->close();
-    
+    echo json_encode($data);    
 ?>
 
 
