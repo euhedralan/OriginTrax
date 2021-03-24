@@ -32,9 +32,9 @@ RETURNS:
     $result = $conn->query($sql);
 
     $row = $result->fetch(PDO::FETCH_ASSOC);
-    echo $row;
     $rticket = array(
-        'ticketnumber' => $row[0],
+        'ticketnumber' => $id,
+        //'ticketnumber' => $row[0],
         'direction' => $row[1],
         'date' => $row[2],
         'branch' => $row[3],
