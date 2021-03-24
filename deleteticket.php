@@ -13,7 +13,7 @@
         die(print_r($e));
     }    
         
-    $ticketnumber = mysqli_real_escape_string($conn, $_POST['id']);
+    $ticketnumber = $_POST['id'];
     
     $sql = "DELETE FROM `tickets` WHERE `ticketNumber`=". $ticketnumber; 
     

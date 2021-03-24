@@ -19,15 +19,9 @@
     $sql = "SELECT * FROM tickets";
     $result = $conn->query($sql);
     
-    //foreach($conn->query($sql) as $row){
-    //    $data[] = $row;
-    //}
-    
     while($row = $result->fetch(PDO::FETCH_ASSOC))  {
          $data[] = $row;
     }
 
     echo json_encode($data);    
 ?>
-
-

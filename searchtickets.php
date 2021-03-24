@@ -12,7 +12,7 @@
         print("Error connecting to SQL Server.");
         die(print_r($e));
     }    
-    $id = mysqli_real_escape_string($conn, $_POST['id']);
+    $id = $_POST['id'];
 
     $sql = "SELECT * FROM tickets WHERE ticketNumber='". $id. "'";
 

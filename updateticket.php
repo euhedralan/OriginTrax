@@ -12,14 +12,14 @@
         print("Error connecting to SQL Server.");
         die(print_r($e));
     }    
-    $ticketnumber = mysqli_real_escape_string($conn, $_POST['ticketnumber']);
-    $direction = mysqli_real_escape_string($conn, $_POST['direction']);
-    $date = mysqli_real_escape_string($conn, $_POST['date']);
-    $branch = mysqli_real_escape_string($conn, $_POST['branch']);
-    $customer = mysqli_real_escape_string($conn, $_POST['customer']);
-    $commodity = mysqli_real_escape_string($conn, $_POST['commodity']);
-    $position = mysqli_real_escape_string($conn, $_POST['position']);
-    $pounds = mysqli_real_escape_string($conn, $_POST['pounds']);
+    $ticketnumber = $_POST['ticketnumber'];
+    $direction = $_POST['direction'];
+    $date = $_POST['date'];
+    $branch = $_POST['branch'];
+    $customer = $_POST['customer'];
+    $commodity = $_POST['commodity'];
+    $position = $_POST['position'];
+    $pounds = $_POST['pounds'];
     
     $sql = "UPDATE `tickets` SET `direction`='". $direction. "', `date`='". $date. "', `branch`=". $branch. ", `customer`=". $customer. ", `commodity`='". $commodity. "', `position`='". $position. "', `pounds`=". $pounds. " WHERE `ticketNumber`=". $ticketnumber; 
     

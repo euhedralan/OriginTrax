@@ -12,8 +12,8 @@
         print("Error connecting to SQL Server.");
         die(print_r($e));
     }    
-    $user = mysqli_real_escape_string($conn, $_POST['rusername']);
-    $pass = mysqli_real_escape_string($conn, $_POST['rpassword']);
+    $user = $_POST['rusername'];
+    $pass = $_POST['rpassword'];
     $sql = "INSERT INTO `users` (`username`, `password`) VALUES ('". $user. "','". $pass. "')";
     $result = $conn->query($sql);
     

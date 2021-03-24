@@ -16,8 +16,8 @@
         die(print_r($e));
     }
 
-    $user = mysqli_real_escape_string($conn, $_POST['username']);
-    $pass = mysqli_real_escape_string($conn, $_POST['password']);
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
 
     $sql = "SELECT * FROM users WHERE username='". $user. "'";
     $result = $conn->query($sql);
