@@ -14,11 +14,11 @@
     }    
     $id = $_POST['id'];
 
-    $sql = "SELECT * FROM tickets WHERE ticketNumber='". $id. "'";
+    $sql = "SELECT * FROM tickets WHERE ticketNumber=". $id;
     $conn->prepare($sql);
     $result = $conn->query($sql);
 
-    $row = $result->fetch(PDO::FETCH_ASSOC);
+    $row = $result->fetch(PDO::FETCH_NUM);
     $rticket = array(
         'ticketNumber' => $row[0],
         'direction' => $row[1],

@@ -25,7 +25,6 @@
     
     if($result) {
         $row = $result->fetch(PDO::FETCH_NUM);
-        $string = implode(',', $row);
         error_log($string);
         if($user && $pass && $row[1] == $user && $row[2] == $pass) {
             $_SESSION['authenticated'] = true;
