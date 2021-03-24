@@ -15,7 +15,7 @@
         
     $ticketnumber = $_POST['id'];
     
-    $sql = "DELETE FROM `tickets` WHERE `ticketNumber`=". $ticketnumber; 
+    $sql = "DELETE FROM tickets WHERE ticketNumber=". $ticketnumber; 
     
     $conn->prepare($sql);
     $result = $conn->query($sql);
