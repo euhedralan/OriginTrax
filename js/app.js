@@ -252,8 +252,8 @@ $(function (){
             url: 'getticket.php',
             data: data,
             success: function(ticket){
-                //ticket = JSON.parse(ticket);
-                ticket = ticket;
+                ticket = JSON.parse(ticket);
+                //ticket = ticket;
 
                 if(ticket.ticketnumber){
                     openForm();
