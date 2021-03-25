@@ -22,8 +22,9 @@
     $pounds = $_POST['pounds'];
     
     $sql = "INSERT INTO tickets ('direction', 'date', 'branch', 'customer', 'commodity', 'position', 'pounds') VALUES
-                                  ('". $direction. "','". $date. "',". $branch. ",". $customer. ",'". $commodity. "','". $position. "',". $pounds. ")";
+                                  ('". $direction. "', '". $date. "',". $branch. ",". $customer. ",'". $commodity. "','". $position. "',". $pounds. ")";
     $conn->prepare($sql);
+    error_log($sql);
     $result = $conn->query($sql);
     
     if($result) {
