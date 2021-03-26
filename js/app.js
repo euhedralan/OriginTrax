@@ -252,9 +252,9 @@ $(function (){
             url: 'getticket.php',
             data: data,
             success: function(ticket){
+                var ticket = new Array();
                 ticket = JSON.parse(ticket);
-                //ticket = ticket;
-
+                
                 if(ticket.ticketnumber){
                     openForm();
                     $direction.prop('checked', false);
