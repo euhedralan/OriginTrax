@@ -252,22 +252,22 @@ $(function (){
             url: 'getticket.php',
             data: data,
             success: function(ticket){
-                var ticket = new Array();
-                ticket = JSON.parse(ticket);
+                var mTick = new Array();
+                mTick = JSON.parse(ticket);
                 
-                if(ticket.ticketnumber){
+                if(mTick.mTicknumber){
                     openForm();
                     $direction.prop('checked', false);
                     $outCheck.prop('checked', false);
-                    if(ticket.direction == "OUT") $outCheck.prop('checked', true);
+                    if(mTick.direction == "OUT") $outCheck.prop('checked', true);
                     else $direction.prop('checked', true);
-                    $ticketnumber.val(ticket.ticketnumber);
-                    $date.val(ticket.date);
-                    $branch.val(ticket.branch);
-                    $customer.val(ticket.customer);
-                    $commodity.val(ticket.commodity);
-                    $position.val(ticket.position);
-                    $pounds.val(ticket.pounds);
+                    $mTicknumber.val(mTick.mTicknumber);
+                    $date.val(mTick.date);
+                    $branch.val(mTick.branch);
+                    $customer.val(mTick.customer);
+                    $commodity.val(mTick.commodity);
+                    $position.val(mTick.position);
+                    $pounds.val(mTick.pounds);
                     $('#saveBtn').hide();
                     $('#updBtn').show();
                 }  
