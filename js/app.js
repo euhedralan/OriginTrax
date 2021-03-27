@@ -253,7 +253,8 @@ $(function (){
             data: data,
             success: function(ticket){
                 var mTick = new Array();
-                mTick = JSON.parse(ticket);
+                //mTick = JSON.parse(ticket);
+                mTick = JSON.parse('<?= $ticket; ?>');
                 
                 if(mTick.mTicknumber){
                     openForm();
