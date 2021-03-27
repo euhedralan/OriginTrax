@@ -33,14 +33,14 @@ RETURNS:
 
     $row = $result->fetch(PDO::FETCH_NUM);
     $rticket = array(
-        'ticketnumber' => $row[0],
-        'direction' => $row[1],
-        'date' => $row[2],
-        'branch' => $row[3],
-        'customer' => $row[4],
-        'commodity' => $row[5],
-        'position' => $row[6],
-        'pounds' =>$row[7],
+        $row[0],
+        $row[1],
+        $row[2],
+        $row[3],
+        $row[4],
+        $row[5],
+        $row[6],
+        $row[7],
     );
 
     echo json_encode($rticket);
