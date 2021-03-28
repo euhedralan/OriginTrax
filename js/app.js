@@ -254,15 +254,14 @@ $(function (){
             success: function(ticket){
                 var mTick = new Array();
                 mTick = JSON.parse(ticket);
-                //mTick = JSON.parse('<?= $ticket; ?>');
-                
-                if(mTick.ticketnumber){
+                                
+                if(mTick.ticketNumber){
                     openForm();
                     $direction.prop('checked', false);
                     $outCheck.prop('checked', false);
                     if(mTick.direction == "OUT") $outCheck.prop('checked', true);
                     else $direction.prop('checked', true);
-                    $mTicknumber.val(mTick.ticketnumber);
+                    $mTicknumber.val(mTick.ticketNumber);
                     $date.val(mTick.date);
                     $branch.val(mTick.branch);
                     $customer.val(mTick.customer);
