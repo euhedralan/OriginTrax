@@ -1,16 +1,3 @@
-
-/* 
-API to retrieve all tickets
-RETURNS:
-    ticketnumber
-    direction
-    date
-    branch
-    customer
-    commodity
-    position
-    pounds
-*/
 <?php
     $servername= "origintrax1.database.windows.net";
     $username="playerone@origintrax1";
@@ -33,7 +20,7 @@ RETURNS:
 
     $row = $result->fetch(PDO::FETCH_NUM);
     $rticket = array(
-        'ticketnumber' => $row[0],
+        'ticketNumber' => $row[0],
         'direction' => $row[1],
         'date' => $row[2],
         'branch' => $row[3],
