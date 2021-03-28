@@ -261,7 +261,7 @@ $(function (){
                     $outCheck.prop('checked', false);
                     if(mTick.direction == "OUT") $outCheck.prop('checked', true);
                     else $direction.prop('checked', true);
-                    $mTicknumber.val(mTick.ticketNumber);
+                    $ticketnumber.val(mTick.ticketNumber);
                     $date.val(mTick.date);
                     $branch.val(mTick.branch);
                     $customer.val(mTick.customer);
