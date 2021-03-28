@@ -256,13 +256,13 @@ $(function (){
                 mTick = JSON.parse(ticket);
                 //mTick = JSON.parse('<?= $ticket; ?>');
                 
-                if(mTick.mTicknumber){
+                if(mTick.ticketnumber){
                     openForm();
                     $direction.prop('checked', false);
                     $outCheck.prop('checked', false);
                     if(mTick.direction == "OUT") $outCheck.prop('checked', true);
                     else $direction.prop('checked', true);
-                    $mTicknumber.val(mTick.mTicknumber);
+                    $mTicknumber.val(mTick.ticketnumber);
                     $date.val(mTick.date);
                     $branch.val(mTick.branch);
                     $customer.val(mTick.customer);
