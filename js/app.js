@@ -249,12 +249,12 @@ $(function (){
 
         $.ajax({
             type: 'POST',
-            url: 'getticket.php',
+            url: 'searchtickets.php',
             data: data,
             success: function(ticket){
                 var mTick = new Array();
-                //mTick = JSON.parse(ticket);
-                mTick = JSON.parse('<?= $ticket; ?>');
+                mTick = JSON.parse(ticket);
+                //mTick = JSON.parse('<?= $ticket; ?>');
                 
                 if(mTick.mTicknumber){
                     openForm();
@@ -273,6 +273,9 @@ $(function (){
                     $('#updBtn').show();
                 }  
                 
+            },
+            error: function() {
+                alert('error getticket');
             }
         })
     });
