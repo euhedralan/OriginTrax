@@ -32,7 +32,6 @@ RETURNS:
     $result = $conn->query($sql);
 
     $row = $result->fetch(PDO::FETCH_NUM);
-    error_log($row);
     error_log($row[0]);
     $rticket = array(
         'ticketnumber' => $row[0],
