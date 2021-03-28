@@ -249,7 +249,7 @@ $(function (){
 
         $.ajax({
             type: 'POST',
-            url: 'searchtickets.php',
+            url: 'getticket.php',
             data: data,
             success: function(ticket){
                 var mTick = new Array();
