@@ -33,6 +33,13 @@ RETURNS:
 
     $row = $result->fetch(PDO::FETCH_NUM);
     error_log($row[0]);
+    error_log($row[1]);
+    error_log($row[2]);
+    error_log($row[3]);
+    error_log($row[4]);
+    error_log($row[5]);
+    error_log($row[6]);
+    error_log($row[7]);
     $rticket = array(
         'ticketnumber' => $row[0],
         'direction' => $row[1],
